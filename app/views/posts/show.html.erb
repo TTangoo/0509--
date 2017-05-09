@@ -1,0 +1,69 @@
+    <!--header-->
+    
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    		    메뉴
+  				</button>
+  				
+  				
+  			
+  				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    				<ul class="navbar-nav mb-5">
+      					<li class="nav-active">
+        				<a class="nav-link px-lg-3" href="#">이용방법</a><span class="sr-only">현재페이지</span></a>
+     					 </li>
+      					<li class="nav-item">
+        				<a class="nav-link px-lg-3" href="#">등장인물</a>
+      					</li>
+      					<li class="nav-item">
+        				<a class="nav-link px-lg-3" href="#">자기소개</a>
+      					</li>
+      					<li class="nav-item">
+        				<a class="nav-link px-lg-3" href="#">문의사항</a>
+      					</li>
+    				</ul>
+  				</div>
+		</nav>
+   
+   <!--article-->
+   
+    <div class="container">
+        <div class="row mb-5">
+    </div>
+        
+    <div class="container">
+        <div class="row">
+            <h1 class="title col-8"><%= @post.title %></h1>
+        </div>
+        <hr>
+        
+        <h4 class="col-8"><%= @post.content %></h4>
+        <hr>
+    
+    </div>    
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 mt-5">
+                <form action="/comments/create" method="POST">
+                    
+                    <input type="hidden" name="post_id" value="<%= @post.id %>">
+                    <input type="text" name="comment_content" class="form-control" id="title">    
+                    <br>
+                    <button type="submit" class="btn btn-warning">댓글달기</button>    
+                </form>
+            </div>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="comments_file container">
+            <div class="row mt-3">   
+                <div class="col-8">
+                        <% @comments.each do |c| %>
+                            <p><%= c.comment %></p>
+                        <% end %>
+                </div>    
+            </div>
+        </div>        
+

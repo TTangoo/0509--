@@ -1,0 +1,66 @@
+<header class="header header__bg">
+    
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    		    메뉴
+  				</button>
+  				
+  				<h1 class="brand"><a class="navbar-brand" href="#"> <em>KARASUNO HIGH SCHOOL</em> - 하이큐 명대사 모음</a></h1>
+  				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    				<ul class="navbar-nav">
+      					<li class="nav-active">
+        				<a class="nav-link px-lg-3" href="#">이용방법</a><span class="sr-only">현재페이지</span></a>
+     					 </li>
+      					<li class="nav-item">
+        				<a class="nav-link px-lg-3" href="#">등장인물</a>
+      					</li>
+      					<li class="nav-item">
+        				<a class="nav-link px-lg-3" href="#">자기소개</a>
+      					</li>
+      					<li class="nav-item">
+        				<a class="nav-link px-lg-3" href="#">문의사항</a>
+      					</li>
+    				</ul>
+  				</div>
+		</nav>
+</header>		
+			
+		        
+                    
+                    <br>
+                    
+                    
+                    <div class="container">
+                         <div class="row justify-content-center">
+                              <div class="col-8">
+                                    <% @posts.each do |p| %>
+                                        <h1><a href="/posts/show/<%=p.id%>"><%= p.title %></a></h1>
+                                    
+                                        <form action="/posts/destroy/<%= p.id %>" method="POST">
+                                       <button type="submit" value="삭제" class="btn btn-warning">삭제</button>
+                                        </form>
+                                        <hr>
+                                    <% end %>
+                              </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-6 push-1 mb-5">
+                            <ul class="nav nav-pills" role="tablist">
+                              <li role="presentation" class="active">
+                              <button class="btn-subscriber px-3 py-2 mt-3" type="button"><a href="/posts/new"> 나도 쓰러 가기</a></button>
+                              </li>
+                              </ul>
+                        </div>
+                    </div>
+                    
+                 
+				
+                    
+                    
+                    
+                </div>
+                
+                
+            

@@ -1,0 +1,50 @@
+a {
+    color: #f45041;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f45041;
+}
+
+
+.header__bg {
+  
+    height: 800px;
+    background-image: linear-gradient(to bottom, transparent 0%, #fff 120%),url('img/bg3.jpg');
+    background-size: 800px auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.navbar-brand em {
+    font-style: normal;
+    font-weight: 700;
+    color:#ff6232;
+}
+
+.btn-subscriber {
+    font-size: 1rem;
+    line-height: 2.25;
+    background-color: white;
+   
+    border: 3px solid #f4a142;
+    border-radius: 100px;
+    transition: 0.25 all ease-in out;
+    text-decoration: none;
+}
+
+.btn-subscriber:hover, .btn-subscriber:focus {
+    background-color: #fffced;
+    color: #fff;
+    
+}
+
+.title {
+    color: red;
+}
+
+.comments_file {
+    background-color: #fcf6e8;
+}
